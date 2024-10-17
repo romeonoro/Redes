@@ -1,4 +1,4 @@
-# Bloquear o Acesso de um PC Windows ao site iffarroupilha.edu.br e a Conteúdo Adulto Usando Linux
+# Bloquear o Acesso de um PC Windows ao site www.iffarroupilha.edu.br e a Conteúdo Adulto Usando Linux
 
 ### 1. Instalar o SSH no Linux
 
@@ -100,6 +100,14 @@ sudo nano /var/www/html/grupo4.html
     </div>
 </body>
 </html>
+
+````
+### 9. Configurar o Redirecionamento de Sites
+```bash
+sudo nano /etc/hosts
+127.0.0.1 www.iffarroupilha.edu.br
+127.0.0.1 sexo
+sudo systemctl restart apache2
 
 ````
 
