@@ -1,6 +1,4 @@
-# Bloquear o Acesso de um PC Windows a um Site e a Conteúdo Adulto Usando Linux
-
-## Passos para realizar o bloqueio e redirecionamento
+# Bloquear o Acesso de um PC Windows ao site iffarroupilha.edu.br e a Conteúdo Adulto Usando Linux
 
 ### 1. Instalar o SSH no Linux
 
