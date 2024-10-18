@@ -221,7 +221,7 @@ sudo systemctl stop squid
 sudo systemctl start squid
 ````
 
-## Acessando o Site pelo Windows 11
+## Acessando o Site pelo Windows 
 - **Abra as configurações.**
 - **Entre em Rede e Internet.**
 - **Clique em Proxy.**
