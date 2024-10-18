@@ -13,16 +13,16 @@
 
 ---
 
-1. [SSH (criar usuário)](#1-instalar-o-ssh-no-linux)
-2. [APACHE 2](#6-instalar-o-apache2-no-linux)
+1. [SSH (criar usuário)](#instalar-o-ssh-no-linux)
+2. [APACHE 2](#instalar-o-apache2-no-linux)
 3. [SUB INTERFACE](#criar-sub-interfaces-no-linux)
-4. [ROTAS](#Salvar)
+4. [ROTAS](#)
 5. [PROXY (nat)](#bloquear-sites-com-proxy)
 6. [SQUID](#configurações-do-squid)
 7. [IP TABLES](#ip-tables-no-linux)
 
 
-### 1. Instalar o SSH no Linux
+### Instalar o SSH no Linux
 
 Para permitir o acesso remoto via SSH ao seu servidor Linux, instale o cliente OpenSSH:
 
@@ -31,32 +31,32 @@ sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install openssh-client
 ````
-### 2. Criar um Usuário no Linux
+### Criar um Usuário no Linux
 ```bash
 sudo adduser robertovargas
 ````
-### 3. Adicionar o Usuário à Lista do SUDO
+### Adicionar o Usuário à Lista do SUDO
 ```bash
 sudo usermod -aG sudo robertovargas
 ````
-### 4. Entrar como Super Usuário
+### Entrar como Super Usuário
 ```bash
 sudo su
 ````
-### 5. Logar como o Novo Usuário
+### Logar como o Novo Usuário
 ```bash
 sudo su robertovargas
 ````
-### 6. Instalar o Apache2 no Linux
+### Instalar o Apache2 no Linux
 ```bash
 sudo apt update
 sudo apt install apache2
 ````
-### 7. Iniciar o Serviço Apache
+### Iniciar o Serviço Apache
 ```bash
 sudo systemctl start apache2
 ````
-### 8. Criar a Página de Redirecionamento
+### Criar a Página de Redirecionamento
 ```bash
 sudo nano /var/www/html/grupo4.html
 ````
@@ -124,7 +124,7 @@ sudo nano /var/www/html/grupo4.html
 </html>
 
 ````
-### 9. Configurar o Redirecionamento de Sites
+### Configurar o Redirecionamento de Sites
 ```bash
 sudo nano /etc/hosts
 127.0.0.1 www.iffarroupilha.edu.br
@@ -132,7 +132,7 @@ sudo nano /etc/hosts
 sudo systemctl restart apache2
 
 ````
-### 10. Configurando Permissões
+### Configurando Permissões
 ```bash
 sudo chown -R www-data:www-data /var/www/html/
 sudo chmod -R 755 /var/www/html/
@@ -146,27 +146,27 @@ sudo ufw allow 'Apache'
 http://172.25.2.204/grupo4.html
 ````
 ## IP TABLES no Linux
-### 1. Instalação
+### Instalação
 ```bash
 sudo apt install iptables
 sudo apt install iptables-persistent
 sudo systemctl enable netfilter-persistent
 ````
 ## Criar Sub-interfaces no Linux
-### 1. Instalar o net-tools
+### Instalar o net-tools
 ```bash
 sudo apt install net-tools
 ````
-### 2. Mostrar Roteador
+### Mostrar Roteador
 ```bash
 sudo ifconfig
 ````
-### 3. Adicionar Sub-interface
+### Adicionar Sub-interface
 ```bash
  sudo ifconfig enp0s31f6:0 192.168.1.33 netmask 255.255.255.252
 ````
 ## Bloquear Sites com Proxy
-### 1. Baixar o SQUID
+### Baixar o SQUID
 ```bash
  sudo apt-get install squid
 ````
