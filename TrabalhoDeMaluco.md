@@ -13,13 +13,13 @@
 
 ---
 
-1. [SSH (criar usuário)](#integrantes-do-grupo)
-2. [APACHE 2](#passo-a-passo)
-3. [SUB INTERFACE](#andamento)
+1. [SSH (criar usuário)](#1-instalar-o-ssh-no-linux)
+2. [APACHE 2](#6-instalar-o-apache2-no-linux)
+3. [SUB INTERFACE](#criar-sub-interfaces-no-linux)
 4. [ROTAS](#Salvar)
-5. [PROXY (nat)](#Imagens)
-6. [SQUID](#sites-relevantes)
-7. [IP TABLES](#-IP-TABLES-no-Linux)
+5. [PROXY (nat)](#bloquear-sites-com-proxy)
+6. [SQUID](#configurações-do-squid)
+7. [IP TABLES](#ip-tables-no-linux)
 
 
 ### 1. Instalar o SSH no Linux
