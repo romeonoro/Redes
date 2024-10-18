@@ -220,12 +220,12 @@ sudo systemctl start squid
 ````
 
 ## Acessando o Site pelo Windows 11
-### Abra as configurações.
-### Entre em Rede e Internet.
-### Clique em Proxy.
-### Desmarque a opção Detectar configurações automaticamente.
-### Em Configurações de proxy manual, clique na opção Editar.
-### Clique em Ativado.
-### Em Endereço de proxy, coloque o IP da sua máquina Linux e, na Porta, coloque 3128.
+- **Abra as configurações.**
+- **Entre em Rede e Internet.**
+- **Clique em Proxy.**
+- **Desmarque a opção Detectar configurações automaticamente.**
+- **Em Configurações de proxy manual, clique na opção Editar.**
+- **Clique em Ativado.**
+- **Em Endereço de proxy, coloque o IP da sua máquina Linux e, na Porta, coloque 3128.**
 
 
