@@ -1,5 +1,7 @@
 # Bloquear o Acesso de um PC Windows ao site www.iffarroupilha.edu.br e a Conteúdo Adulto Usando Linux
 
+## Grupo 4: Romeo, Gilberto e Iago
+
 ### 1. Instalar o SSH no Linux
 
 Para permitir o acesso remoto via SSH ao seu servidor Linux, instale o cliente OpenSSH:
@@ -110,5 +112,100 @@ sudo nano /etc/hosts
 sudo systemctl restart apache2
 
 ````
+### 10. Configurando Permissões
+```bash
+sudo chown -R www-data:www-data /var/www/html/
+sudo chmod -R 755 /var/www/html/
+````
+### Habilitar no Firewall
+```bash
+sudo ufw allow 'Apache'
+````
+### Abrir o Site Criado:
+```bash
+http://172.25.2.204/grupo4.html
+````
+## IP TABLES no Linux
+### 1. Instalação
+```bash
+sudo apt install iptables
+sudo apt install iptables-persistent
+sudo systemctl enable netfilter-persistent
+````
+## Criar Sub-interfaces no Linux
+### 1. Instalar o net-tools
+```bash
+sudo apt install net-tools
+````
+### 2. Mostrar Roteador
+```bash
+sudo ifconfig
+````
+### 3. Adicionar Sub-interface
+```bash
+ sudo ifconfig enp0s31f6:0 192.168.1.33 netmask 255.255.255.252
+````
+## Bloquear Sites com Proxy
+### 1. Baixar o SQUID
+```bash
+ sudo apt-get install squid
+````
+### Verificar a Instalação
+```bash
+ sudo service squid status
+````
+### Configurar o SQUID
+```bash
+ cd /etc/squid
+````
+### Fazer Backup do SQUID
+```bash
+sudo cp squid.conf squid.conf.backup
+````
+### Apagar o SQUID e Criar Novo
+```bash
+sudo rm squid.conf
+sudo nano squid.conf
+````
+### Entrar no Config
+```bash
+cd /etc/squid
+````
+### Criar Arquivos
+```bash
+sudo touch /etc/squid/sites_proibidos.txt
+sudo touch /etc/squid/palavras_proibidas.txt
+````
+### Editar Arquivos
+```bash
+sudo nano /etc/squid/sites_proibidos.txt
+sudo nano /etc/squid/palavras_proibidas.txt
+````
+### Configurações do SQUID
+```bash
+# Define a porta do proxy
+http_port 3128
+
+# Permite acesso apenas à rede local (192.168.1.8/255.255.255.248)
+acl sites_proibidos url_regex -i "/etc/squid/sites_proibidos.txt"
+http_access deny sites_proibidos
+
+# Bloqueia acesso a sites listados no arquivo "sites_proibidos"
+deny_info http://172.25.2.214/grupo2 sites_proibidos
+````
+### Reiniciar SQUID
+```bash
+sudo systemctl stop squid
+sudo systemctl start squid
+````
+
+## Acessando o Site pelo Windows 11
+### Abra as configurações.
+### Entre em Rede e Internet.
+### Clique em Proxy.
+### Desmarque a opção Detectar configurações automaticamente.
+### Em Configurações de proxy manual, clique na opção Editar.
+### Clique em Ativado.
+### Em Endereço de proxy, coloque o IP da sua máquina Linux e, na Porta, coloque 3128.
 
 
