@@ -28,8 +28,6 @@
 
 ### Instalar o SSH no Linux
 
-Para permitir o acesso remoto via SSH ao seu servidor Linux, instale o cliente OpenSSH:
-
 ```bash
 sudo apt-get update
 sudo apt-get upgrade
