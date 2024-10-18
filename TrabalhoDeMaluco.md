@@ -13,13 +13,17 @@
 
 ---
 
-1. [SSH](#instalar-o-ssh-no-linux)
-2. [APACHE 2](#instalar-o-apache2-no-linux)
-3. [SUB INTERFACE](#criar-sub-interfaces-no-linux)
-4. [ROTAS](#)
-5. [PROXY](#bloquear-sites-com-proxy)
-6. [SQUID](#configurações-do-squid)
-7. [IP TABLES](#ip-tables-no-linux)
+| Nome           | Funcionalidade                                                |
+|----------------|:-------------------------------------------------------------:|
+| [SSH](#instalar-o-ssh-no-linux) | Acesso remoto e seguro ao servidor                  |
+| [APACHE 2](#instalar-o-apache2-no-linux) | Servidor web para hospedar páginas e serviços web |
+| [SUB-INTERFACE](#criar-sub-interfaces-no-linux) | Segmentação de rede para diferentes serviços de comunicação |
+| [ROTAS](#)     | Gerenciamento e direcionamento de tráfego entre diferentes redes |
+| [PROXY](#bloquear-sites-com-proxy) | Intermediário para requisições externas e controle de acesso |
+| [SQUID](#configurações-do-squid) | Servidor proxy para filtragem e bloqueio de sites e conteúdos |
+| [IP TABLES](#ip-tables-no-linux) | Gerenciamento de regras de firewall para controle de tráfego na rede |
+
+
 
 
 ### Instalar o SSH no Linux
