@@ -13,11 +13,11 @@
 
 ---
 
-1. [SSH (criar usuário)](#instalar-o-ssh-no-linux)
+1. [SSH](#instalar-o-ssh-no-linux)
 2. [APACHE 2](#instalar-o-apache2-no-linux)
 3. [SUB INTERFACE](#criar-sub-interfaces-no-linux)
 4. [ROTAS](#)
-5. [PROXY (nat)](#bloquear-sites-com-proxy)
+5. [PROXY](#bloquear-sites-com-proxy)
 6. [SQUID](#configurações-do-squid)
 7. [IP TABLES](#ip-tables-no-linux)
 
