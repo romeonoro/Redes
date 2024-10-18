@@ -2,6 +2,17 @@
 
 ## Grupo 4: Romeo, Gilberto e Iago
 
+
+<p align="center">
+    <img src="trabRedesCC.jpg" alt="redes">
+</p>
+
+<p align="center">
+    <img src="transferir.png" alt="quadro">
+</p>
+
+---
+
 ### 1. Instalar o SSH no Linux
 
 Para permitir o acesso remoto via SSH ao seu servidor Linux, instale o cliente OpenSSH:
