@@ -112,14 +112,6 @@ sudo nano /var/www/html/grupo4.html
 </html>
 ```
 
-### Configurar Redirecionamento de Sites
-```bash
-sudo nano /etc/hosts
-127.0.0.1 www.iffarroupilha.edu.br
-127.0.0.1 sexo
-sudo systemctl restart apache2
-```
-
 ### Permissões de Arquivos
 ```bash
 sudo chown -R www-data:www-data /var/www/html/
