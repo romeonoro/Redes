@@ -22,7 +22,7 @@
 | [🦑 SQUID](#configurações-do-squid) | Servidor proxy para filtragem e bloqueio de sites e conteúdos |
 | [🔥 IP TABLES](#ip-tables-no-linux) | Gerenciamento de regras de firewall para controle de tráfego na rede |
 
-### Instalar o SSH no Linux
+## 🔐 Instalar o SSH no Linux
 
 ```bash
 sudo apt-get update
@@ -50,7 +50,7 @@ sudo su
 sudo su robertovargas
 ```
 
-### Instalar o Apache2 no Linux
+## 🌐 Instalar o Apache2 no Linux
 ```bash
 sudo apt update
 sudo apt install apache2
@@ -156,7 +156,8 @@ sudo apt install iptables-persistent
 sudo systemctl enable netfilter-persistent
 ```
 
-## Criar Sub-interfaces no Linux
+## 🌉 Criar Sub-interfaces no Linux
+
 ### Instalar o net-tools
 ```bash
 sudo apt install net-tools
@@ -183,7 +184,7 @@ sudo apt-get install squid
 sudo service squid status
 ```
 
-### Configurar o SQUID
+## 🦑 Configurar o SQUID
 ```bash
 cd /etc/squid
 ```
