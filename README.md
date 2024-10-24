@@ -1,4 +1,4 @@
-# 🛑 Bloquear Acesso de um PC Windows ao site www.iffarroupilha.edu.br e a Conteúdo Adulto Usando Linux
+## 🛑 Bloquear Acesso de um PC Windows ao site www.iffarroupilha.edu.br e a Conteúdo Adulto Usando Linux
 
 ## Grupo 4: 👨‍💻 Romeo, Gilberto e Iago
 
