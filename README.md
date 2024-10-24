@@ -228,14 +228,14 @@ sudo systemctl start squid
 4. Desmarque a opção **Detectar configurações automaticamente**.
 5. Em **Configuração manual de proxy**, clique em **Editar**.
 6. Ative o proxy.
-7. No campo **Endereço de proxy**, insira o IP do Linux.
+7. No campo **Endereço de proxy**, insira o IP do Linux (192.168.1.25).
 8. No campo **Porta**, coloque `3128`.
 
-### Mudando o IP 
+## Mudando o IP no Windows
 
 1. Central de Rede e Compartilhamento
 2. Conexões: Ethernet
-3.🛡️ Propriedades
+3.🛡️Propriedades
 4. Propriedades de Protocolo IP Versão 4 (TCP/IPV4)
 5. Nossa Rede: 192.168.1.24 / 29
        Linux: 192.168.1.25
@@ -243,5 +243,12 @@ sudo systemctl start squid
        Gateway: 192.168.1.25
 6. alterar dns para 8.8.8.8 (google)
 7. desativar IPV6
+   
+   
+## Mudando o IP no Linux
+
+1. sudo ifconfig enp0s31f6:0 192.168.1.25 netmask 255.255.255.248
+   
+
 
 
