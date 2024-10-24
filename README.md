@@ -1,4 +1,5 @@
 # 🛑 Bloqueio de Acesso no Windows via Linux
+
 ### Bloquear acesso ao site www.iffarroupilha.edu.br e Conteúdo Adulto.
 
 ### 👨‍💻 Grupo 4 (Romeo, Gilberto e Iago)
