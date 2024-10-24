@@ -4,11 +4,11 @@
 
 
 <p align="center">
-    <img src="trabRedesCC.jpg" alt="redes">
+    <img src="assets/trabRedesCC.jpg" alt="redes">
 </p>
 
 <p align="center">
-    <img src="transferir.png" alt="quadro">
+    <img src="assets/transferir.png" alt="quadro">
 </p>
 
 ---
