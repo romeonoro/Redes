@@ -222,45 +222,47 @@ sudo systemctl start squid
 ---
 
 ## 💻 Configurar Proxy no Windows
-1. Abra as configurações do Windows.
+1. Abra as **Configurações do Windows**.
 2. Vá em **Rede e Internet**.
 3. Clique em **Proxy**.
 4. Desmarque a opção **Detectar configurações automaticamente**.
 5. Em **Configuração manual de proxy**, clique em **Editar**.
 6. Ative o proxy.
-7. No campo **Endereço de proxy**, insira o IP do Linux (192.168.1.25).
+7. No campo **Endereço de proxy**, insira o IP do Linux (ex.: `192.168.1.25`).
 8. No campo **Porta**, coloque `3128`.
 
-## Mudando o IP no Windows
+---
 
-1. Painel de Controle.
-2. Rede e Internet.
-3. Central de Rede e Compartilhamento.
-4. Conexões: Ethernet.
-5. 🛡️Propriedades.
-6. Propriedades de Protocolo IP Versão 4 (TCP/IPV4).
-7. Rede Grupo 4: 192.168.1.24 / 29 <br>
-       Linux: 192.168.1.25 <br>
-       Windows: 192.168.1.26 <br>
-       Gateway: 192.168.1.25 <br>
-8. Alterar DNS para 8.8.8.8 (Google).
-9. Desativar IPV6.
-   
-   
-## Mudando o IP no Linux
+## 🌐 Mudando o IP no Windows
+
+1. Abra o **Painel de Controle**.
+2. Vá para **Rede e Internet**.
+3. Acesse **Central de Rede e Compartilhamento**.
+4. Clique em **Conexões: Ethernet**.
+5. Selecione **Propriedades**.
+6. Selecione **Protocolo IP Versão 4 (TCP/IPV4)** e clique em **Propriedades**.
+7. Configure a rede do Grupo 4:
+   - Rede: `192.168.1.24 / 29`
+   - Linux: `192.168.1.25`
+   - Windows: `192.168.1.26`
+   - Gateway: `192.168.1.25`
+8. Alterar o DNS para `8.8.8.8` (Google).
+9. Desativar o IPv6.
+
+---
+
+## 🖥️ Mudando o IP no Linux
 
 ```bash
 sudo ifconfig enp0s31f6:0 192.168.1.25 netmask 255.255.255.248
 ```
 
-## Comandos Extras
+---
 
+## 🛠️ Comandos Extras
+
+### Finalizar Processos
 ```bash
-kill -9
+kill -9 <PID>
 ```
-
-
-   
-
-
 
