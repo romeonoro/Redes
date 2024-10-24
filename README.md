@@ -233,21 +233,33 @@ sudo systemctl start squid
 
 ## Mudando o IP no Windows
 
-1. Central de Rede e Compartilhamento <br>
-2. Conexões: Ethernet <br>
-3.🛡️Propriedades <br>
-4. Propriedades de Protocolo IP Versão 4 (TCP/IPV4) <br>
-5. Rede Grupo 4: 192.168.1.24 / 29 <br>
+1. Painel de Controle.
+2. Rede e Internet.
+3. Central de Rede e Compartilhamento.
+4. Conexões: Ethernet.
+5. 🛡️Propriedades.
+6. Propriedades de Protocolo IP Versão 4 (TCP/IPV4).
+7. Rede Grupo 4: 192.168.1.24 / 29 <br>
        Linux: 192.168.1.25 <br>
        Windows: 192.168.1.26 <br>
        Gateway: 192.168.1.25 <br>
-6. Alterar DNS para 8.8.8.8 (Google) <br>
-7. Desativar IPV6 <br>
+8. Alterar DNS para 8.8.8.8 (Google).
+9. Desativar IPV6.
    
    
 ## Mudando o IP no Linux
 
-1. sudo ifconfig enp0s31f6:0 192.168.1.25 netmask 255.255.255.248
+```bash
+sudo ifconfig enp0s31f6:0 192.168.1.25 netmask 255.255.255.248
+```
+
+## Comandos Extras
+
+```bash
+kill -9
+```
+
+
    
 
 
