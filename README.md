@@ -1,6 +1,8 @@
-## 🛑 Bloquear Acesso de um PC Windows ao site www.iffarroupilha.edu.br e a Conteúdo Adulto Usando Linux
+# 🛑 Bloqueio de Acesso no Windows via Linux
 
-## Grupo 4: 👨‍💻 Romeo, Gilberto e Iago
+### Bloquear acesso ao site www.iffarroupilha.edu.br e Conteúdo Adulto.
+
+### 👨‍💻 Grupo 4 (Romeo, Gilberto e Iago)
 
 <p align="center">
     <img src="assets/trabRedesCC.jpg" alt="redes">
@@ -12,17 +14,19 @@
 
 ---
 
-| 📝 Nome          | 🚀 Funcionalidade                                                |
+| 📝 Componente   | 🚀 Descrição                                                   |
 |----------------|:-------------------------------------------------------------:|
-| [🔐 SSH](#instalar-o-ssh-no-linux) | Acesso remoto e seguro ao servidor                  |
-| [🌐 APACHE 2](#instalar-o-apache2-no-linux) | Servidor web para hospedar páginas e serviços web |
-| [🌉 SUB-INTERFACE](#criar-sub-interfaces-no-linux) | Segmentação de rede para diferentes serviços de comunicação |
-| [🔀 ROTAS]()     | Gerenciamento e direcionamento de tráfego entre diferentes redes |
-| [🛡️ PROXY](#bloquear-sites-com-proxy) | Intermediário para requisições externas e controle de acesso |
-| [🦑 SQUID](#configurações-do-squid) | Servidor proxy para filtragem e bloqueio de sites e conteúdos |
-| [🔥 IP TABLES](#ip-tables-no-linux) | Gerenciamento de regras de firewall para controle de tráfego na rede |
+| [🔐 SSH](#instalando-o-ssh-no-linux) | Acesso remoto e seguro ao servidor Linux            |
+| [🌐 Apache2](#instalando-o-apache2-no-linux) | Servidor web para hospedar páginas e serviços web |
+| [🌉 Sub-Interfaces](#criando-sub-interfaces-no-linux) | Segmentação de rede para diferentes serviços         |
+| [🔀 Rotas]()     | Gerenciamento de tráfego entre redes                          |
+| [🛡️ Proxy](#bloqueio-de-sites-usando-proxy) | Intermediário para controle de acesso a requisições externas |
+| [🦑 Squid](#configurando-o-squid-no-linux) | Servidor proxy para filtragem e bloqueio de sites   |
+| [🔥 IP Tables](#instalando-e-configurando-ip-tables-no-linux) | Firewall para controle de tráfego na rede             |
 
-## 🔐 Instalar o SSH no Linux
+---
+
+## 🔐 Instalando o SSH no Linux
 
 ```bash
 sudo apt-get update
@@ -30,27 +34,29 @@ sudo apt-get upgrade
 sudo apt-get install openssh-client
 ```
 
-### Criar um Usuário no Linux
+### Criar um Novo Usuário
 ```bash
 sudo adduser robertovargas
 ```
 
-### Adicionar o Usuário à Lista do SUDO
+### Adicionar Usuário ao SUDO
 ```bash
 sudo usermod -aG sudo robertovargas
 ```
 
-### Entrar como Super Usuário
+### Acessar como Super Usuário
 ```bash
 sudo su
 ```
 
-### Logar como o Novo Usuário
+### Logar como Novo Usuário
 ```bash
 sudo su robertovargas
 ```
 
-## 🌐 Instalar o Apache2 no Linux
+---
+
+## 🌐 Instalando o Apache2 no Linux
 ```bash
 sudo apt update
 sudo apt install apache2
@@ -61,7 +67,7 @@ sudo apt install apache2
 sudo systemctl start apache2
 ```
 
-### Criar a Página de Redirecionamento
+### Criar Página de Redirecionamento
 ```bash
 sudo nano /var/www/html/grupo4.html
 ```
@@ -95,24 +101,6 @@ sudo nano /var/www/html/grupo4.html
             color: #333;
             font-size: 1.3rem;
         }
-        p {
-            font-size: 1.2rem;
-            color: #777;
-            margin-top: 10px;
-        }
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        a:hover {
-            background-color: #555;
-        }
     </style>
 </head>
 <body>
@@ -124,7 +112,7 @@ sudo nano /var/www/html/grupo4.html
 </html>
 ```
 
-### Configurar o Redirecionamento de Sites
+### Configurar Redirecionamento de Sites
 ```bash
 sudo nano /etc/hosts
 127.0.0.1 www.iffarroupilha.edu.br
@@ -132,7 +120,7 @@ sudo nano /etc/hosts
 sudo systemctl restart apache2
 ```
 
-### Configurando Permissões
+### Permissões de Arquivos
 ```bash
 sudo chown -R www-data:www-data /var/www/html/
 sudo chmod -R 755 /var/www/html/
@@ -143,104 +131,111 @@ sudo chmod -R 755 /var/www/html/
 sudo ufw allow 'Apache'
 ```
 
-### Abrir o Site Criado:
+### Abrir a Página Criada
 ```bash
 http://172.25.2.204/grupo4.html
 ```
 
-## 🔥 IP TABLES no Linux
-### Instalação
+---
+
+## 🔥 Instalando e Configurando IP Tables no Linux
+### Instalação do IP Tables
 ```bash
 sudo apt install iptables
 sudo apt install iptables-persistent
 sudo systemctl enable netfilter-persistent
 ```
 
-## 🌉 Criar Sub-interfaces no Linux
+---
 
-### Instalar o net-tools
+## 🌉 Criando Sub-Interfaces no Linux
+
+### Instalar net-tools
 ```bash
 sudo apt install net-tools
 ```
 
-### Mostrar Roteador
+### Verificar Roteador
 ```bash
 sudo ifconfig
 ```
 
-### Adicionar Sub-interface
+### Adicionar Sub-Interface
 ```bash
 sudo ifconfig enp0s31f6:0 192.168.1.33 netmask 255.255.255.252
 ```
 
-## 🛡️ Bloquear Sites com Proxy
-### Baixar o SQUID
+---
+
+## 🛡️ Bloqueio de Sites Usando Proxy
+### Instalar o Squid
 ```bash
 sudo apt-get install squid
 ```
 
-### Verificar a Instalação
+### Verificar Status do Squid
 ```bash
 sudo service squid status
 ```
 
-## 🦑 Configurar o SQUID
+---
+
+## 🦑 Configurando o Squid no Linux
 ```bash
 cd /etc/squid
 ```
 
-### Fazer Backup do SQUID
+### Fazer Backup do Arquivo de Configuração
 ```bash
 sudo cp squid.conf squid.conf.backup
 ```
 
-### Apagar o SQUID e Criar Novo
+### Criar Nova Configuração
 ```bash
 sudo rm squid.conf
 sudo nano squid.conf
 ```
 
-### Entrar no Config
-```bash
-cd /etc/squid
-```
-
-### Criar Arquivos
+### Criar Arquivos de Bloqueio
 ```bash
 sudo touch /etc/squid/sites_proibidos.txt
 sudo touch /etc/squid/palavras_proibidas.txt
 ```
 
-### Editar Arquivos
+### Editar Arquivos de Bloqueio
 ```bash
 sudo nano /etc/squid/sites_proibidos.txt
 sudo nano /etc/squid/palavras_proibidas.txt
 ```
 
-### Configurações do SQUID
+### Configuração do Squid
 ```bash
 # Define a porta do proxy
 http_port 3128
 
-# Permite acesso apenas à rede local (192.168.1.8/255.255.255.248)
+# Permite acesso apenas à rede local
 acl sites_proibidos url_regex -i "/etc/squid/sites_proibidos.txt"
 http_access deny sites_proibidos
 
-# Bloqueia acesso a sites listados no arquivo "sites_proibidos"
+# Bloqueia acesso a sites listados
 deny_info http://172.25.2.214/grupo4 sites_proibidos
 ```
 
-### Reiniciar SQUID
+### Reiniciar o Serviço Squid
 ```bash
 sudo systemctl stop squid
 sudo systemctl start squid
 ```
 
-## 💻 Acessando o Site pelo Windows 
-- **Abra as configurações.**
-- **Entre em Rede e Internet.**
-- **Clique em Proxy.**
-- **Desmarque a opção Detectar configurações automaticamente.**
-- **Em Configurações de proxy manual, clique na opção Configurar/Editar.**
-- **Clique em Ativado.**
-- **Em Endereço de proxy, coloque o IP da sua máquina Linux e, na Porta, coloque 3128.**
+---
+
+## 💻 Configurar Proxy no Windows
+1. Abra as configurações do Windows.
+2. Vá em **Rede e Internet**.
+3. Clique em **Proxy**.
+4. Desmarque a opção **Detectar configurações automaticamente**.
+5. Em **Configuração manual de proxy**, clique em **Editar**.
+6. Ative o proxy.
+7. No campo **Endereço de proxy**, insira o IP do Linux.
+8. No campo **Porta**, coloque `3128`.
+
