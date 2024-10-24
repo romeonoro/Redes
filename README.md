@@ -240,6 +240,6 @@ sudo systemctl start squid
 - **Entre em Rede e Internet.**
 - **Clique em Proxy.**
 - **Desmarque a opção Detectar configurações automaticamente.**
-- **Em Configurações de proxy manual, clique na opção Editar.**
+- **Em Configurações de proxy manual, clique na opção Configurar/Editar.**
 - **Clique em Ativado.**
 - **Em Endereço de proxy, coloque o IP da sua máquina Linux e, na Porta, coloque 3128.**
