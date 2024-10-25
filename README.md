@@ -16,7 +16,7 @@
 
 | 📝 Componente   | 🚀 Descrição                                                   |
 |----------------|:-------------------------------------------------------------:|
-| [🔐 SSH](#instalando-o-ssh-no-linux) | Acesso remoto e seguro ao servidor Linux            |
+| [🔐 SSH](#-instalar-o-ssh-no-linux) | Acesso remoto e seguro ao servidor Linux            |
 | [🌐 Apache2](#instalando-o-apache2-no-linux) | Servidor web para hospedar páginas e serviços web |
 | [🌉 Sub-Interfaces](#criando-sub-interfaces-no-linux) | Segmentação de rede para diferentes serviços         |
 | [🔀 Rotas]()     | Gerenciamento de tráfego entre redes                          |
