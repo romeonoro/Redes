@@ -19,7 +19,7 @@
 | [🔐 SSH](#-instalando-o-ssh-no-linux) | Acesso remoto e seguro ao servidor Linux            |
 | [🌐 Apache2](#-instalando-o-apache2-no-linux) | Servidor web para hospedar páginas e serviços web |
 | [🌉 Sub-Interfaces](#-criando-sub-interfaces-no-linux) | Segmentação de rede para diferentes serviços         |
-| [🔀 Rotas]()     | Gerenciamento de tráfego entre redes                          |
+| [🔀 Rotas](#-mudando-o-ip-no-windows)     | Gerenciamento de tráfego entre redes                          |
 | [🛡️ Proxy](#%EF%B8%8F-bloqueio-de-sites-usando-proxy) | Intermediário para controle de acesso a requisições externas |
 | [🦑 Squid](#-configurando-o-squid-no-linux) | Servidor proxy para filtragem e bloqueio de sites   |
 | [🔥 IP Tables](#-instalando-e-configurando-ip-tables-no-linux) | Firewall para controle de tráfego na rede             |
